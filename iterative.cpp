@@ -1,5 +1,5 @@
 /*
- * C++ example of a typical recursion as an counter example to tailRecursion.cpp
+ * C++ example iterative solution: iterative.cpp
  *
  * Tal Lancaster
  * 2017-07-24
@@ -8,13 +8,15 @@
 #include <iostream>
 #include <cstdint>
 
-int32_t f_recur (int32_t n)
+int32_t f_iter (int32_t n)
 {
-    if (n == 1) {
-        return n;
+    int32_t result {};
+    while (n) {
+        result += n;
+        --n;
     }
 
-    return n + f_recur(n-1);
+    return result;
 }
 
 int32_t f (int32_t n)
@@ -30,7 +32,7 @@ int32_t f (int32_t n)
         throw std::overflow_error ("overflow of sum()" );
     }
 
-    auto result {f_recur (n) };
+    auto result {f_iter (n) };
     if (isNegativeVal) {
         result = -result;
     }

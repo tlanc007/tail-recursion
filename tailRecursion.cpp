@@ -22,15 +22,28 @@ int32_t f_tailRecur (int32_t total, int32_t n)
 
 int32_t f2 (int32_t n)
 {
-    constexpr auto MaxN {65535};
+    auto isNegativeVal {false};
+    if (n < 0) {
+        isNegativeVal = true;
+        n = -n;
+    }
 
+    constexpr auto MaxN {65535};
     if (MaxN < n) {
         throw std::overflow_error ("overflow of sum()" );
     }
 
-    return f_tailRecur (0, n);
+    auto result {f_tailRecur (0, n) };
+    if (isNegativeVal) {
+        result = -result;
+    }
+
+    return result;
 }
 
 int32_t main () {
-    std::cout << f2 (65535) << "\n";
+    //std::cout << f2 (65535) << "\n";
+    int i;
+    std::cin >> i;
+    std::cout << f2 (i) << '\n';
 }
