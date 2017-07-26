@@ -39,10 +39,3 @@ int32_t f (int32_t n)
 
     return result;
 }
-
-int32_t main () {
-    //std::cout << f (65535) << "\n";
-    int i;
-    std::cin >> i;
-    std::cout << f (i) << '\n';
-}

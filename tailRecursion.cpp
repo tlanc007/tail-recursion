@@ -20,7 +20,7 @@ int32_t f_tailRecur (int32_t total, int32_t n)
     return f_tailRecur(total+n, n-1);   // tail recursion
 }
 
-int32_t f2 (int32_t n)
+int32_t f (int32_t n)
 {
     auto isNegativeVal {false};
     if (n < 0) {
@@ -39,11 +39,4 @@ int32_t f2 (int32_t n)
     }
 
     return result;
-}
-
-int32_t main () {
-    //std::cout << f2 (65535) << "\n";
-    int i;
-    std::cin >> i;
-    std::cout << f2 (i) << '\n';
 }
