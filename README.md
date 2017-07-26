@@ -43,9 +43,9 @@ int32_t f_tailRecur (int32_t total, int32_t n)
 
 **clang 5.0** 
 
-|Test|opt -O3|sec|us|
-|---|---|---|---|---|
-|01_iterative | | 12.5305| 1.25305e+07|
+| Test | opt -O3 | sec | us |
+| --- | --- | --- | --- |
+|01_iterative | | 12.5305 | 1.25305e+07|
 |01_iterative | X | 0.000361178 | 361.178|
 |02_recursive | | 34.135 | 3.4135e+07|
 |02_recursive | X | 0.000391354 | 391.354|
@@ -57,7 +57,7 @@ int32_t f_tailRecur (int32_t total, int32_t n)
 **gcc 4.2.1**
 
 |Test|opt -O3|sec|us|
-|---|---|---|---|---|
+|---|---|---|---|
 |01_iterative | | 12.591| 1.25911e+07|
 |01_iterative | X | 0.000393699 | 393.699|
 |02_recursive | | 33.9891 | 3.39891e+07|
