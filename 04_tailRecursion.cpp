@@ -1,8 +1,9 @@
 /*
- * C++ example of tail-recursion
+ * 04_tailRecursion: C++ example of tail-recursion
  *
  * Many of the major C++ compilers take advantage of tail-recursion and make
- * a special effort to heavily optimize this pattern.
+ * a special effort to heavily optimize this pattern by unrolling the recursion
+ * into an iterative solution.
  *
  * Tal Lancaster
  * 2017-07-24
